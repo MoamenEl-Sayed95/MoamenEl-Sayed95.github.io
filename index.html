@@ -19,8 +19,8 @@
       --glass-bg: rgba(255, 255, 255, 0.1);
       --highlight-color: #007acc;
       --link-hover: #005a9e;
-      --name-color: #00aaff;
-      --job-color: #615e63;
+      --name-color: #5200b1;
+      --job-color: #000000;
       --glow-color: #00ccff;
       --icon-bg: #f0f0f0;
       --white: #ffffff;
@@ -32,7 +32,7 @@
       margin: 0;
       padding: 0;
       background-color: var(--bg-color);
-      background-image: url('https://lightwallpapers.com/downloads/wallpaper-portfolio/4.photo-1518655048521-f130df041f66.jpg');
+      background-image: url('https://cdn.bhdw.net/im/beautiful-mountain-view-with-trees-and-birds-flying-wallpaper-120021_w635.webp');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -63,7 +63,7 @@
 
     .profile-img:hover {
       transform: scale(1.1) rotate(2deg);
-      box-shadow: 0 0 10px #fffb00, 0 0 25px #fffb00;
+      box-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff;
       filter: brightness(1.1) saturate(1.2);
     }
 
@@ -137,213 +137,32 @@
       color: #00ccff;
       text-shadow: 0 0 5px #00ccff, 0 0 10px #00ccff;
     }
-
-    .welcome-modal {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(6px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-
-    .modal-content {
-      background: rgba(255, 255, 255, 0.25);
-      border: 2px solid #00ccff;
-      border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 0 25px #00ccff80;
-      max-width: 400px;
-      animation: fadeZoom 0.5s ease;
-    }
-
-    .modal-content p {
-      color: var(--white);
-      font-weight: bold;
-      margin: 12px 0;
-      font-size: 18px;
-      transition: color 0.3s ease;
-      cursor: default;
-    }
-
-    .modal-content p:hover {
-      color: var(--yellow-hover);
-    }
-
-    .close-btn {
-      margin-top: 15px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      background-color: #00ccff;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .close-btn:hover {
-      background-color: #009ecf;
-    }
-
-    .wave {
-      display: inline-block;
-      animation: wave 2s infinite;
-      transform-origin: 70% 70%;
-      font-size: 26px;
-    }
-
-    @keyframes wave {
-      0% { transform: rotate(0deg); }
-      15% { transform: rotate(15deg); }
-      30% { transform: rotate(-10deg); }
-      45% { transform: rotate(15deg); }
-      60% { transform: rotate(0deg); }
-      100% { transform: rotate(0deg); }
-    }
-
-    @keyframes fadeZoom {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    /* Notification Bell */
-    .notification-bell {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      cursor: pointer;
-      z-index: 10000;
-    }
-
-    .notification-bell img {
-      width: 40px;
-      height: 40px;
-      animation: ring 2s infinite;
-      transition: transform 0.3s ease;
-    }
-
-    .notification-bell:hover img {
-      transform: scale(1.1);
-    }
-
-    .notification-count {
-      position: absolute;
-      top: -5px;
-      right: -5px;
-      background-color: red;
-      color: white;
-      font-size: 12px;
-      font-weight: bold;
-      border-radius: 50%;
-      padding: 3px 6px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    }
-
-    @keyframes ring {
-      0% { transform: rotate(0deg); }
-      1% { transform: rotate(15deg); }
-      3% { transform: rotate(-10deg); }
-      5% { transform: rotate(15deg); }
-      7% { transform: rotate(-10deg); }
-      10% { transform: rotate(0deg); }
-      100% { transform: rotate(0deg); }
-    }
-
-    /* Toast Notification */
-    .toast-message {
-      position: fixed;
-      top: 80px;
-      right: 20px;
-      background-color: #00ccff;
-      color: white;
-      padding: 14px 18px;
-      border-radius: 10px;
-      font-weight: bold;
-      box-shadow: 0 0 15px #00ccff80;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.5s ease, transform 0.5s ease;
-      z-index: 10000;
-    }
-
-    .toast-message.show {
-      opacity: 1;
-      transform: translateY(10px);
-      pointer-events: auto;
-    }
   </style>
-
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const modal = document.getElementById('welcomeModal');
-      const closeBtn = document.getElementById('closeModal');
-      closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
-    });
-
-    function showToast() {
-      const toast = document.getElementById('toast');
-      const sound = document.getElementById('notifySound');
-      sound.currentTime = 0;
-      sound.play();
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 4000);
-    }
-  </script>
 </head>
 <body>
-
-  <!-- Notification Bell -->
-  <div class="notification-bell" onclick="showToast()">
-    <img src="https://cdn-icons-png.flaticon.com/512/1827/1827392.png" alt="Notification Bell">
-    <span class="notification-count">1</span>
-  </div>
-
-  <!-- Audio Alert -->
-  <audio id="notifySound" src="https://notificationsounds.com/storage/sounds/file-sounds-1152-pristine.mp3" preload="auto"></audio>
-
-  <!-- Toast Message -->
-  <div class="toast-message" id="toast">
-    👋 مرحبًا بك من جديد! أنا المهندس مؤمن أبوحاتي
-  </div>
-
-  <!-- Welcome Modal Popup -->
-  <div id="welcomeModal" class="welcome-modal">
-    <div class="modal-content">
-      <p><span class="wave">👋</span> مرحبًا! معك المهندس مؤمن أبوحاتي</p>
-      <p><span class="wave">👋</span> Welcome! I'm Eng. Moamen Abouhaty</p>
-      <button class="close-btn" id="closeModal">إغلاق / Close</button>
-    </div>
-  </div>
 
   <div class="container">
     <img src="https://media.licdn.com/dms/image/v2/D5622AQGuBuRW3QVazQ/feedshare-shrink_800/B56ZcoBeD6HUAg-/0/1748723165035?e=2147483647&v=beta&t=UuHfdDJqwffrMTm2aLqA0tR4fHyIymLCDHJ5QQBA-pY"
          alt="Moamen Abouhaty"
          class="profile-img" />
     <h1>Moamen El-Sayed Abouhaty</h1>
-    <p>Backend Engineer | Node.js | Express.js | MongoDB</p>
+    <p>Back-End Engineer | Node.js | Express.js | MongoDB</p>
 
     <div class="icons">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" title="C"/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++"/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript"/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="Python" title="Python"/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua" title="Lua"/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" title="Node.js"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" title="Express.js"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg" alt="Express.js" title="Express.js"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" title="MongoDB"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" alt="Git" title="Git"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" alt="GitHub" title="Github"/>
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.svg" alt="Postman" title="Postman"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="HTML5" title="HTML5"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS3" title="CSS3"/>
     </div>
   </div>
 
@@ -364,5 +183,6 @@
     </div>
     <div class="footer-text glow-hover">© 2025 Moamen Abouhaty. All rights reserved.</div>
   </footer>
+
 </body>
 </html>

@@ -51,6 +51,11 @@
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
     }
 
+    .profile-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
     .profile-img {
       width: 150px;
       height: 150px;
@@ -65,6 +70,26 @@
       transform: scale(1.1) rotate(2deg);
       box-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff;
       filter: brightness(1.1) saturate(1.2);
+    }
+
+    .name-hover {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      opacity: 0;
+      transition: 0.3s ease;
+      font-size: 16px;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .profile-wrapper:hover .name-hover {
+      opacity: 1;
     }
 
     h1 {
@@ -142,9 +167,13 @@
 <body>
 
   <div class="container">
-    <img src="https://media.licdn.com/dms/image/v2/D5622AQGuBuRW3QVazQ/feedshare-shrink_800/B56ZcoBeD6HUAg-/0/1748723165035?e=2147483647&v=beta&t=UuHfdDJqwffrMTm2aLqA0tR4fHyIymLCDHJ5QQBA-pY"
-         alt="Moamen Abouhaty"
-         class="profile-img" />
+    <div class="profile-wrapper">
+      <img src="https://media.licdn.com/dms/image/v2/D5622AQGuBuRW3QVazQ/feedshare-shrink_800/B56ZcoBeD6HUAg-/0/1748723165035?e=2147483647&v=beta&t=UuHfdDJqwffrMTm2aLqA0tR4fHyIymLCDHJ5QQBA-pY"
+           alt="Moamen Abouhaty"
+           class="profile-img" />
+      <div class="name-hover">Moamen El-Sayed Abouhaty</div>
+    </div>
+
     <h1>Moamen El-Sayed Abouhaty</h1>
     <p>Back-End Engineer | Node.js | Express.js | MongoDB</p>
 

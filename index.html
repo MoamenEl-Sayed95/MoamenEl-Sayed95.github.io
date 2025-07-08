@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Moamen Abouhaty - Backend Engineer | Node.js| Express.js | MongoDB">
+  <meta name="keywords" content="Moamen Abouhaty, Backend Engineer| Node.js | Express.js | MongoDB">
+  <meta name="author" content="Moamen Abouhaty">
+  <meta name="google-site-verification" content="RcC7N6YFYLsKBSyYAahbVXw9eKmEBVuA6Y0oDZ4ii-Y" />
+  <title>Moamen El-Sayed Abouhaty</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <!-- Internal CSS -->
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1e1e1e;
+      --glass-bg: rgba(255, 255, 255, 0.25);
+      --highlight-color: #007acc;
+      --link-hover: #005a9e;
+      --name-color: #5200b1;
+      --job-color: #000000;
+      --glow-color: #00ccff;
+      --icon-bg: #f0f0f0;
+      --white: #ffffff;
+      --yellow-hover: #ffeb3b;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      background-image: url('https://cdn.bhdw.net/im/beautiful-mountain-view-with-trees-and-birds-flying-wallpaper-120021_w635.webp'), linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2));
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: var(--text-color);
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 100px auto;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .profile-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #00ccff40, 0 0 20px #00ccff40;
+      transition: 0.5s;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff;
+      filter: brightness(1.1) saturate(1.2);
+    }
+
+    .name-hover {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      opacity: 0;
+      transition: 0.3s ease;
+      font-size: 16px;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .profile-wrapper:hover .name-hover {
+      opacity: 1;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: var(--name-color);
+      font-family: 'Dancing Script', cursive;
+      font-size: 38px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      font-family: 'Caprasimo', sans-serif;
+      color: var(--job-color);
+      text-transform: uppercase;
+    }
+
+    .icons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .icons img {
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+      padding: 8px;
+      border-radius: 12px;
+      background-color: var(--icon-bg);
+      transition: 0.3s;
+    }
+
+    .icons img:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 8px var(--glow-color), 0 0 15px var(--glow-color);
+    }
+
+    footer {
+      padding: 30px 0 10px;
+      background: transparent;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .footer-icons a img {
+      width: 28px;
+      height: 28px;
+      transition: 0.3s;
+    }
+
+    .footer-icons a img:hover {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 5px var(--glow-color)) drop-shadow(0 0 10px var(--glow-color));
+    }
+
+    .footer-text {
+      margin-top: 15px;
+      font-size: 14px;
+      color: var(--text-color);
+      opacity: 0.7;
+    }
+
+    .glow-hover:hover {
+      color: #00ccff;
+      text-shadow: 0 0 5px #00ccff, 0 0 10px #00ccff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="profile-wrapper">
+      <img src="https://avatars.githubusercontent.com/u/205936208?v=4" alt="Moamen Abouhaty" class="profile-img" />
+      <div class="name-hover">Moamen El-Sayed Abouhaty</div>
+    </div>
+
+    <h1>Moamen El-Sayed Abouhaty</h1>
+    <p>Back-End Engineer | Node.js | Express.js | MongoDB</p>
+
+    <div class="icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" title="C"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" alt="Python" title="Python"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua" title="Lua"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" title="Node.js"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" alt="Express.js" title="Express.js"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" title="MongoDB"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" alt="Git" title="Git"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt="GitHub" title="Github"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.svg" alt="Postman" title="Postman"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML5" title="HTML5"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="CSS3" title="CSS3"/>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/moamen.abouhaty" target="_blank" title="Facebook">
+        <img src="https://images.icon-icons.com/2351/PNG/512/logo_facebook_icon_143184.png" alt="Facebook">
+      </a>
+      <a href="https://github.com/MoamenEl-Sayed95" target="_blank" title="GitHub">
+        <img src="https://images.icon-icons.com/2351/PNG/512/logo_github_icon_143196.png" alt="GitHub">
+      </a>
+      <a href="mailto:moamenprogrammer95@gmail.com" title="Email">
+        <img src="https://images.icon-icons.com/2351/PNG/512/logo_gmail_envelope_letter_email_icon_143171.png" alt="Email">
+      </a>
+      <a href="https://www.linkedin.com/in/moamen-abouhaty-19054b355" target="_blank" title="LinkedIn">
+        <img src="https://images.icon-icons.com/2351/PNG/512/logo_linkedin_icon_143191.png" alt="LinkedIn">
+      </a>
+    </div>
+    <div class="footer-text glow-hover">© 2025 Moamen Abouhaty. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
